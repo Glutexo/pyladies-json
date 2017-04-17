@@ -21,9 +21,10 @@ get '/prezidenti' do
 end
 
 get '/prezidenti/všichni' do
-  names = []
-  DB[:presidents].each do |row|
-    names << row[:name]
+  items = []
+  DB[:presidents].order(:id).each do |row|
+    items << { jméno: row[:name],
+               život: { od: row[:life_from], do: row[:life_to] } }
   end
-  json names
+  json items
 end
