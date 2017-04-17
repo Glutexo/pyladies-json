@@ -38,6 +38,9 @@ než jednoho prezidenta (protektorátní a exilový), stejně jako jsme v někt
 mohl zastávat `úřad` v několika nespojitých obdobích. Pokud je libovolná
 vlastnost `do` prázdná, znamená to, že prezident ještě žije, nebo ještě úřaduje.
 
+Při vyhledávání prezidentů podle roku či dne, nachází se v seznamu `úřad` jen ta
+období, která odpovídají dotazu.
+
 #### Použití
 
 `GET /prezidenti/všichni` – seznam všech prezidentů
