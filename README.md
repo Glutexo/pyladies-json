@@ -34,9 +34,9 @@ stejné struktury, jako je vlastnost `život`.
 
 Ve všech případech se vrací seznam prezidentů: V jeden den jsme mohli mít i více
 než jednoho prezidenta (protektorátní a exilový), stejně jako jsme v některé dny
-žádného prezidenta neměli. Vlastnost úřad je seznamem, protože jeden prezident
-mohl zastávat úřat v několika nespojitých obdobích. Pokud je libovolná vlastnost
-`do` prázdná, znamená to, že prezident ještě žije, nebo ještě úřaduje.
+žádného prezidenta neměli. Vlastnost `úřad` je seznamem, protože jeden prezident
+mohl zastávat `úřad` v několika nespojitých obdobích. Pokud je libovolná
+vlastnost `do` prázdná, znamená to, že prezident ještě žije, nebo ještě úřaduje.
 
 #### Použití
 
