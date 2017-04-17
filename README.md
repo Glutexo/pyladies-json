@@ -28,12 +28,15 @@ Morava a Česka. O každém z nich uvádí jméno, den narození a úmrtí a de
 do úřadu a odstoupení z něj.
 
 Prezident je představován objektem s vlastnostmi `jméno`, `život` a `úřad`.
-Vlastnosti `život` a `úřad` jsou objektem s vlastnostmi `od` a `do`, kde pole
-`do` může obsahovat prázdnou hodnotu.
+Vlastnost `život` jse objektem s vlastnostmi `od` a `do`, kde pole
+`do` může obsahovat prázdnou hodnotu. Vlastnost `úřad` je seznamem objektů
+stejné struktury, jako je vlastnost `život`.
 
 Ve všech případech se vrací seznam prezidentů: V jeden den jsme mohli mít i více
 než jednoho prezidenta (protektorátní a exilový), stejně jako jsme v některé dny
-žádného prezidenta neměli.
+žádného prezidenta neměli. Vlastnost úřad je seznamem, protože jeden prezident
+mohl zastávat úřat v několika nespojitých obdobích. Pokud je libovolná vlastnost
+`do` prázdná, znamená to, že prezident ještě žije, nebo ještě úřaduje.
 
 #### Použití
 
