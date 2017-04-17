@@ -5,7 +5,7 @@ napsaná v Pythonu, takže zároveň ukazuje možnost vzájemného porozumění
 různými programovacími jazyky.
 
 Aplikace běží na adrese
-[pyladies-json.herokuapp.com](https://pyladies-json.herokuapp.com/). Je napsaná
+[pyladies-json.herokuapp.com](http://pyladies-json.herokuapp.com/). Je napsaná
 v [Ruby](http://www.ruby-lang.org/) a používá jednoduchý framework
 [Sinatra](http://www.sinatrarb.com/) a databázi
 [PostgreSQL](http://www.postgresql.org/).
