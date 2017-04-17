@@ -14,7 +14,7 @@ v [Ruby](http://www.ruby-lang.org/) a používá jednoduchý framework
 
 ### `/prezidenti` – čeští prezidenti
 
-Aplikace poskutyje informace o prezidentech Československa, Protektorátu Čechy a
+Aplikace poskytuje informace o prezidentech Československa, Protektorátu Čechy a
 Morava a Česka. O každém z nich uvádí jméno, den narození a úmrtí a den nástupu
 do úřadu a odstoupení z něj.
 
