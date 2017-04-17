@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sequel'
 require 'json'
 
-DB = Sequel.sqlite 'db/database.sqlite'
+DB = Sequel.connect ENV['DATABASE_URL']
 
 def json *args
   JSON.generate *args
@@ -28,7 +28,7 @@ def presidents *args, &block
     items[row[:president]][:úřad] << { od: row[:from], do: row[:to] }
   end
 
-  DB[:presidents].where(id: items.keys).each do |row|
+  DB[:president].where(id: items.keys).each do |row|
     item              = items[row[:id]]
     item[:jméno]      = row[:name]
     item[:život][:od] = row[:life_from]

@@ -1,22 +1,21 @@
-CREATE TABLE `presidents` (
-  `id` INTEGER PRIMARY KEY NOT NULL,
-  `name` VARCHAR NOT NULL,
-  `life_from` DATE NOT NULL,
-  `life_to` DATE NULL
+CREATE TABLE "president" (
+  "id" SERIAL PRIMARY KEY,
+  "name" VARCHAR NOT NULL,
+  "life_from" DATE NOT NULL,
+  "life_to" DATE NULL
 );
 
-CREATE TABLE `office` (
-  `id` INTEGER PRIMARY KEY NOT NULL,
-  `president` INTEGER NOT NULL,
-  `from` DATE NOT NULL,
-  `to` NULL,
-  FOREIGN KEY (`president`) REFERENCES `president` (`id`)
+CREATE TABLE "office" (
+  "id" SERIAL PRIMARY KEY,
+  "president" INTEGER NOT NULL REFERENCES "president" ("id"),
+  "from" DATE NOT NULL,
+  "to" DATE NULL
 );
 
 -- Prezidenti Československa, Protektorátu Čechy a Morava, a Česka. Seřazeni
 -- podle prvního nástupu do úřadu.
-INSERT INTO `presidents`
-  (`id`, `name`, `life_from`, `life_to`)
+INSERT INTO "president"
+  ("id", "name", "life_from", "life_to")
 VALUES
   (1,  'Tomáš Garrigue Masaryk', '1850-03-07', '1937-09-14'),
   (2,  'Edvard Beneš',           '1884-05-28', '1948-09-03'),
@@ -30,8 +29,8 @@ VALUES
   (10, 'Václav Klaus',           '1941-06-19', NULL),
   (11, 'Miloš Zeman',            '1944-09-28', NULL);
 
-INSERT INTO `office`
-  (`president`, `from`, `to`)
+INSERT INTO "office"
+  ("president", "from", "to")
 VALUES
   (1, '1918-11-14', '1935-12-14'),
   (2, '1935-12-18', '1938-10-05'),
