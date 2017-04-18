@@ -20,7 +20,6 @@ end
 
 def presidents *args, &block
   items = {}
-  p DB[:office].where(*args, &block)
   DB[:office].where(*args, &block).each do |row|
     items[row[:president]] = { jméno: nil,
                                     život: { od: nil, do: nil },
